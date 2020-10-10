@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+find ./src/ -type f ! -name "*.c" -exec rm {} \;
+gcc ./src/$1.c -o ./src/$1 -lm
+chmod +x ./src/$1
+./src/$1
