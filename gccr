@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 find ./src/ -type f ! -name "*.c" -exec rm {} \;
-gcc ./src/$1.c -o ./src/$1 -lm
-chmod +x ./src/$1
-./src/$1
+if [[ $# -eq 0 ]]; then
+    echo -e "Usage: ./ggcr <filename>\n"
+else
+    cd src
+    gcc $1.c -o $1 -lm
+    chmod +x $1
+    ./$1
+fi 
