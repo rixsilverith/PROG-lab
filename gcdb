@@ -1,12 +1,12 @@
 #!/usr/bin/bash
+# Clean the directory from previous garbage.
 find ./src/ -type f ! -name "*.c" -exec rm {} \;
 
 if [[ $# -eq 0 ]]; then
-    echo -e "Usage: ./ggcr <filename>\n"
+    echo -e "Usage: ./gcdb <filename>\n"
 else
     local -r filename=$1
     cd src
-    gcc $filename.c -o $filename -lm
+    gcc -g $filename.c -o $filename -lm
     chmod +x $filename
-    ./$filename
-fi 
+    gdb $filename
