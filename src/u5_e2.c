@@ -13,11 +13,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
     unsigned int number, guessed_number, iter = 0;
     char random_answer;
+    time_t tm;
+
+    // Make random numbers random
+    srand((unsigned)time(&tm));
 
     printf("\n\033[1mLet's play a game.\033[0m\n");
     printf("\n\033[32m?\033[0m\033[1m Do you want the computer to randomly generate the number to be guesed? [Y/n] \033[0m");

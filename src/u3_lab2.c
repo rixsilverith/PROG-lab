@@ -6,20 +6,19 @@
 
 int main()
 {
-    int num1, num2, num3;
+    int a, b, c, max;
 
     printf("\033[32m?\033[0m Insert three integer numbers: ");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    scanf("%d %d %d", &a, &b, &c);
 
-    if (num1 < num2 && num3 < num2) {
-        printf("\033[32m==>\033[0m %d is the largest number.\n", num2);
-    } else if (num2 < num1 && num3 < num1) {
-        printf("\033[32m==>\033[0m %d is the largest number.\n", num1);
-    } else if (num1 < num3 && num2 < num3) {
-        printf("\033[32m==>\033[0m %d is the largest number.\n", num3);
+    if (a >= b && a >= c) {
+        max = a;
+    } else if (b >= a && b >= c) {
+        max = b;
     } else {
-        printf("Smth else.\n");
+        max = c;
     }
 
+    printf("\033[32m==>\033[0m The largest number out of %d, %d and %d is: %d\n", a, b, c, max);
     return 0;
 }

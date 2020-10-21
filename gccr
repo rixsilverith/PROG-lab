@@ -4,9 +4,9 @@ find ./src/ -type f ! -name "*.c" -exec rm {} \;
 if [[ $# -eq 0 ]]; then
     echo -e "Usage: ./ggcr <filename>\n"
 else
-    local -r filename=$1
+    filename=$1
     cd src
-    gcc $filename.c -o $filename -lm
+    gcc ${filename}.c -o $filename -lm
     chmod +x $filename
     ./$filename
 fi 

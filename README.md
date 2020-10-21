@@ -18,5 +18,11 @@ This script will first clean the **src** directory from any file other than `.c`
 - `<filename>` should not include the `.c` extension. Otherwise, an error will show.
 - The `gccr` script should be run from the root of this project, not inside the **src** folder.
 
+## Debugging
+To debug any C program with the `gdb` debugger just run
+```bash
+./gcdb <filename>
+```
+
 ## License
 This source files are under the MIT license. Check [LICENSE](LICENSE) for more information.

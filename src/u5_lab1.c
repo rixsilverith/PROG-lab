@@ -23,12 +23,12 @@ int main()
 
     printf("\n");
 
-    iteration = 0;
-    while (iteration < num_elements_to_read) {
+    iteration = num_elements_to_read - 2;
+    while (iteration >= 0) {
         if (numbers[iteration] < numbers[num_elements_to_read - 1])
             printf("\033[32m\033[1m==>\033[0m The number %.2lf is less than the number %.2lf\n", numbers[iteration], numbers[num_elements_to_read - 1]);
 
-        iteration++;
+        iteration--;
     }
 
     printf("\n");

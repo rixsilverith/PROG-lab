@@ -15,8 +15,8 @@ int main()
     scanf("%d", &age);
 
     adult = age >= 18;
-    multipleof3 = !(age % 3);
-    condition = adult || !multipleof3;
+    multipleof3 = age % 3;
+    condition = adult || multipleof3;
 
     printf("\033[32m==>\033[0m You are of age or your age is not a multiple of three: %d\n", condition);
     return 0;

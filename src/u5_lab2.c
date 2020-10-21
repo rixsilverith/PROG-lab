@@ -62,7 +62,27 @@ int main()
         scanf("%d", &numbers[iter]);
         iter++;
     }
+    printf("\n");
 
+    iter = nums_to_type - 1;
+    printf("\033[1m\033[32m==>\033[0m The even numbers are ");
+    while (iter >= 0) {
+        if (!(numbers[iter] % 2)) {
+            printf("%d ", numbers[iter]);
+        }
+
+        i--;
+    }
+
+    printf("\n\033[1m\033[32m==>\033[0m The odd numbers are ");
+    int i = nums_to_type - 1;
+    while (i >= 0) {
+        if (numbers[i] % 2)
+            printf("%d ", numbers[i]);
+        i--;
+    }
+
+    /*
     int even_counter = 0, odd_counter = 0;
     printf("\n");
     iter = 0;
@@ -98,6 +118,7 @@ int main()
     } else {
         printf("\n\033[1m\033[32m==>\033[0m No odd numbers were typed :(");
     }
+    */
 
     printf("\n\n");
     return 0;

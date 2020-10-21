@@ -15,9 +15,9 @@ int main()
 {
     unsigned int d1, m1, y1, d2, m2, y2;
 
-    printf("\033[32m?\033[0m Please enter the first date: ");
+    printf("\033[32m?\033[0m Enter day, month and year separated by spaces: ");
     scanf("%u %u %u", &d1, &m1, &y1);
-    printf("\033[32m?\033[0m Please enter the second date: ");
+    printf("\033[32m?\033[0m Enter another day, month and year separated by spaces: ");
     scanf("%u %u %u", &d2, &m2, &y2);
 
     if (y1 < y2) {

@@ -13,7 +13,7 @@
 int main ()
 {
     unsigned int height;
-    double weight;
+    double weight, bmi;
 
     printf("Insert your height in cm: ");
     scanf("%u", &height);
@@ -21,7 +21,7 @@ int main ()
     printf("Now, insert your weight in Kg: ");
     scanf("%lf", &weight);
 
-    double bmi = 10000 * weight / (height * height);
+    bmi = 10000 * weight / (height * height);
 
     printf("\033[32m==> \033[0m\033[1mYour BMI (Body Mass Index) is %.2lf. \033[0m\033[32m<==\033[0m\n", bmi);
     return 0;

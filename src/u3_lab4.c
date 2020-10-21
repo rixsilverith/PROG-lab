@@ -6,11 +6,19 @@
 
 int main()
 {
-    char character;
+    char c1, c2;
 
-    printf("\033[32m?\033[0m Insert a character: ");
+    printf("\033[32m?\033[0m Enter a character: ");
     scanf(" %c", &character);
 
+    if (c1 >= 'a' && c1 <= 'z') {
+        c2 = c1 - ('a' - 'A');
+    } else if (a >= 'A' && a <= 'Z') {
+        c2 = c1 + ('a' - 'A');
+    } else {
+        c2 = c1;
+    }
 
+    printf("\033[32m==>\033[0m %c leads to %c\n", c1, c2);
     return 0;
 }

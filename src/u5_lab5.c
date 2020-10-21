@@ -23,18 +23,24 @@
 int main()
 {
     int num_range, iter = 0;
+    short test;
+    double numbers[MAX];
 
     do {
         printf("\n\033[1m\033[32m?\033[37m Enter a integer number [%u, %u]\033[0m ", MIN, MAX);
         scanf("%d", &num_range);
 
-        if (num_range < MIN || num_range > MAX)
+        test = 0;
+        if (num_range < MIN || num_range > MAX) {
             printf("\n\033[1m\033[31m==>\033[0m The selected integer is not in the interval.\n\n");
-    } while (num_range < MIN || num_range > MAX);
+            test = 1;
+        }
+    } while (test);
 
-    double numbers[num_range];
-    double ordered_nums[num_range];
+    //double numbers[num_range];
+    // double ordered_nums[num_range];
 
+    // read array elements.
     printf("\n");
     while (iter < num_range) {
         printf("\033[1m\033[32m?\033[37m Insert number %d of %d\033[0m ", iter + 1, num_range);

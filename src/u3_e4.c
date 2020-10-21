@@ -18,17 +18,12 @@ int main()
     printf("\033[32m?\033[0m Enter your age: ");
     scanf("%d", &age);
 
-    adult = age >= 18;
-    multipleof3 = !(age % 3);
-
-    if (adult) {
-        if (!multipleof3) {
-            printf("\033[32m==>\033[0m You are of age and your age is not a multiple of three.\n");
-        } else {
-            printf("\033[32m==>\033[0m You are of age and your age is a multiple of three.\n");
-        }
-    } else {
+    if (age < 18) {
         printf("\033[32m==>\033[0m You are underage.\n");
+    } else if (!(age % 3)) {
+        printf("\033[32m==>\033[0m You are of age and your age is a multiple of three.\n");
+    } else {
+        printf("\033[32m==>\033[0m You are of age and your age is not a multiple of three.\n");
     }
 
     return 0;
